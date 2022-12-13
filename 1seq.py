@@ -8,4 +8,4 @@ for i in range(num_count): # запрашиваем числа по очеред
 
 my_list.sort() # сортируем список
 
-print(my_list) # вывод
+print(my_list) #  вывод
