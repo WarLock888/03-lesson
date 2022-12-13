@@ -49,13 +49,11 @@ while again:  # пока на входе цикла True то играем
 
         answers[author] = answer
 
-    score = sum(answers[author] == AUTHORS[author] for author in
-                selected_authors)  # берем сумму от генератора списка булевых ответов для всех авторов
+    score = sum(answers[author] == AUTHORS[author] for author in selected_authors)  # берем сумму от генератора списка булевых ответов для всех авторов
 
     print(f'Количество правильных: {score}')
     print(f'Количество ошибок: {len(selected_authors) - score}')
     print(f'Процент правильных: {score * 100 / len(selected_authors)}%')
     print(f'Процент НЕправильных: {100 - (score * 100 / len(selected_authors))}%')
 
-    again = input(
-        'Хотите сыграть еще раз?\n').lower() == 'да'  # спросим у пользователя о продолжении и положим ответ в  переменную again
+    again = input('Хотите сыграть еще раз?\n').lower() == 'да'  # спросим у пользователя о продолжении и положим ответ в  переменную again
